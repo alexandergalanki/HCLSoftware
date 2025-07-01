@@ -62,7 +62,7 @@
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
-      height: 210px; /* Reduced card height */
+      height: 200px; /* Reduced card height */
       display: flex;
       flex-direction: column;
       justify-content: space-between;

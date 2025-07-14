@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ticket Tracker</title>
+  <link rel="stylesheet" href="FAstyle.css" />  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.26/jspdf.plugin.autotable.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+  <h2>Ticket Tracker</h2>
+
+  <div class="button-row">
+    <button class="btn" onclick="openModal()">Add New Customer</button>
+    <button class="btn" onclick="openMonthModal()">Add New Month</button>
+    <button class="btn" onclick="saveAllTables()">Update/Save Data</button>
+    <button class="btn" onclick="exportToPDF()">Download</button>
+  </div>
+
+  <div id="tablesContainer"></div>
+
+  <div id="customerModal" class="modal">
+    <div class="modal-content">
+      <h3>Add New Customer</h3>
+      <input type="text" id="customerName" placeholder="Customer Name" />
+      <select id="projectType">
+        <option value="Support">Support</option>
+        <option value="Development">Development</option>
+      </select>
+      <button class="btn" onclick="addCustomerToLastTable()">Submit</button>
+    </div>
+  </div>
+
+
+  <div id="monthModal" class="modal">
+    <div class="modal-content">
+      <h3>Add New Month</h3>
+      <input type="text" id="monthName" placeholder="Month Name (e.g. Aug 24)" />
+      <button class="btn" onclick="addNewMonth()">Create</button>
+    </div>
+  </div>
+
+  <script src="fun.js"></script>
+  <script src="save.js"></script>
+  <script src="export-table-to-pdf.js"></script>
+</body>
+</html>
